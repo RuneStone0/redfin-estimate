@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  redfin-estimate-api:
+    build: .
+    container_name: redfin-estimate-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
